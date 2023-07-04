@@ -3,23 +3,25 @@
 using namespace std;
 
 int getMin(int num[],int n){
-    int min= INT_MAX;
+    int mini= INT_MAX;
     for(int i=0;i<n;i++){
-        if(num[i] < min){
-            min=num[i];
-        }
+        // if(num[i] < min){
+        //     min=num[i];
+        // }
+        mini = min(num[i],mini);
     }
-    return min;
+    return mini;
 }
 
 int getMax(int num[],int n){
-    int max= INT_MIN;
+    int maxi = INT_MIN;
     for(int i=0;i<n;i++){
-        if(num[i]>max){
-            max=num[i];
-        }
+        // if(num[i]>max){
+        //     max=num[i];
+        // }
+         maxi = max(num[i],maxi);
     }
-    return max;
+    return maxi;
 }
 
 int main(){
