@@ -22,6 +22,6 @@ int main(){
         cout<<"Element is present in the array";
     }
     else{
-        cout<<"Element is not present in the array";
+        cout<<"Element is absent from the array";
     }
 }
