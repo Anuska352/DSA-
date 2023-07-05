@@ -1,11 +1,11 @@
 #include<iostream>
 using namespace std;
 
-void reverse(int arr[],int n){
-    int start=0;
-    while(start<=n-1){
-        swap(arr[start],arr[start+1]);
-        start+=2;
+void swapAlternate(int arr[],int n){
+    for(int i=0;i<n;i+=2){
+       if(i+1 < n){
+        swap(arr[i],arr[i+1]);
+       }
     }
 }
 
@@ -13,13 +13,14 @@ void printArray(int arr[],int n){
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
 }
 
 int main(){
-     int arr[6]={45,0,8,33,2,90};
+     int arr[5]={11,33,9,76,43};
 
-    reverse(arr,6);
-    printArray(arr,6);
+    swapAlternate(arr,5);
+    printArray(arr,5);
     
     return 0;
 }
