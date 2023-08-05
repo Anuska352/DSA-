@@ -4,26 +4,46 @@ using namespace std;
 
 int main(){
 
-    //create a queue
-    queue<int> q;
+    deque<int> d;
 
-    q.push(11);
-    cout<<"Front of queue "<<q.front()<<endl;
-    q.push(15);
-    q.push(13);
+    d.push_front(12);
+    d.push_back(14);
 
-    cout<<"size of queue is "<<q.size()<<endl;
+   
 
-    q.pop();
-     cout<<"Front of queue "<<q.front()<<endl;
-    cout<<"size of queue is "<<q.size()<<endl;
+    d.pop_front();
+     cout<<d.front() <<endl;
+    cout<<d.back() <<endl;
+    d.pop_back();
 
-    if(q.empty()){
+    if(d.empty()){
         cout<<"Queue is empty"<<endl;
     }
     else{
-        cout<<"Queue is empty"<<endl;
+        cout<<"Queue is not empty"<<endl;
     }
+
+
+    //create a queue
+    // queue<int> q;
+
+    // q.push(11);
+    // cout<<"Front of queue "<<q.front()<<endl;
+    // q.push(15);
+    // q.push(13);
+
+    // cout<<"size of queue is "<<q.size()<<endl;
+
+    // q.pop();
+    //  cout<<"Front of queue "<<q.front()<<endl;
+    // cout<<"size of queue is "<<q.size()<<endl;
+
+    // if(q.empty()){
+    //     cout<<"Queue is empty"<<endl;
+    // }
+    // else{
+    //     cout<<"Queue is empty"<<endl;
+    // }
 
 
 }
